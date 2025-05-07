@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: zmlwz2zrz-go-gitops
+  description: This is GitOps manifest for zmlwz2zrz-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=zmlwz2zrz-go
+    backstage.io/kubernetes-id: zmlwz2zrz-go 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: zmlwz2zrz-go
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:zmlwz2zrz-go
